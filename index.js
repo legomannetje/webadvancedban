@@ -38,6 +38,9 @@ const db_config = {
     password: database_PASS,
     database: database_NAME
 };
+
+app.listen(3000, '127.0.0.1');
+
 let con;
 // functions
 function handleDisconnect() {
