@@ -39,8 +39,6 @@ const db_config = {
     database: database_NAME
 };
 
-app.listen(3000, '127.0.0.1');
-
 let con;
 // functions
 function handleDisconnect() {
@@ -929,4 +927,4 @@ app.get('/punishments/history/:id', async (req, res) => {
 app.get('/error/500',(req, res)=>res.send(error()));
 app.use( async(err, req, res, text) => do500(err, req, res, text))
 app.use( async(req, res, next) => do404(req, res, next))
-http.listen(port);
+http.listen(port, '127.0.0.1');
